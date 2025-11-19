@@ -1,0 +1,5 @@
+{
+  "name": "FormQA Synthetic Data Gen",
+  "description": "A tool to generate and analyze synthetic user data based on custom form schemas for QA and testing purposes.",
+  "requestFramePermissions": []
+}
