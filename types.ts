@@ -1,9 +1,14 @@
+
 export enum FieldType {
   TEXT = 'Text Input',
+  PARAGRAPH = 'Long Answer',
   EMAIL = 'Email',
   SELECT = 'Dropdown Select',
   CHECKBOX = 'Checkbox',
   NUMBER = 'Number',
+  DATE = 'Date',
+  TIME = 'Time',
+  LINEAR_SCALE = 'Linear Scale',
 }
 
 export interface FormField {
@@ -11,6 +16,7 @@ export interface FormField {
   label: string;
   type: FieldType;
   options?: string[]; // For Select/Checkbox
+  googleEntryId?: string; // The entry.123456 ID for Google Forms
 }
 
 export interface GeneratedRecord {
@@ -25,4 +31,4 @@ export interface SimulationStats {
   avgTimePerRecord: number;
 }
 
-export type SimulationStatus = 'idle' | 'running' | 'completed';
+export type SimulationStatus = 'idle' | 'analyzing' | 'running' | 'completed' | 'stopped';
